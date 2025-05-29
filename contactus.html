@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body id="bodyColor">
+<form style="width: 100px; height: 100px; box-shadow: 2px;margin: 40px;padding-left: 450px;">
+    <label for="fname">First Name:</label><br><br>
+    <input type="text" id="fname" name="fname" ><br><br>
+    <label for="lname">Last Name:</label><br><br>
+    <input type="text" id="lname" name="lname" ><br><br>
+    <label for="Comment">Comments OR Suggestions</label><br><br>
+    <textarea name="txtComment" id="textComment"></textarea><br><br>
+    <button type="submit" onclick="sendComment()" title="Submit" style="margin-left: 40px;">Submit</button>
+</form>
+</body>
+<script>
+    const div=document.getElementById("bodyColor")
+    div.insertAdjacentHTML("afterbegin",localStorage.getItem('nav'))
+    const sendComment = ()=>{
+        alert('Sent Comments.')
+    }
+</script>
+</html>
